@@ -1,0 +1,196 @@
+html, body {
+  background-color: #000;
+  background-image: url('../images/trail2.png');
+  font-family: 'Quicksand', sans-serif;
+  overflow: hidden; /* Prevent scrollbars during loading */
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  width: 100%; /* Ensure body and html take full height */
+  height: 100%; /* Ensure body and html take full height */
+  margin: 0; /* Remove default margin */
+}
+.head {
+  background-color: rgba(0, 0, 0, 0.5);
+  color:white;
+  border-radius: 8px; /* Slightly smaller radius */
+  border: 1px dashed rgba(0, 0, 0, 0.5) ; /* Reduced border width */
+  margin: 10px; /* Reduced bottom margin */
+  text-align: center; /* Center text in header */
+}
+h3{
+ 
+  width:100%;
+  left: 40%;
+  color: white; 
+  bottom: 0; 
+  position: fixed;
+  animation: fast 5s forwards infinite;
+
+
+}
+@keyframes fast{
+  0%{ transform: translateX(100vw);}
+  50%{transform: translateX(0);}
+  100%{transform: translateX(-100vw);}
+ 
+}
+.container {
+  display: flex;
+  top:35%;
+  justify-content: center; /* Center the gallery */
+  height: 100%; /* Ensure container takes full height */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted for horizontal rectangles */
+  gap: 32px; /* Increased gap between items */
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.gallery-item {
+  background-color:rgba(0, 0, 0, 0.5);
+   position: relative;
+   overflow: hidden;
+   width: 200px;
+   height: 500px;
+   float: left;
+   margin: 30px;
+   transform: skew(-10deg);
+   transition: transform 0.5s ease; /* Optional: smooth scaling effect */
+   text-decoration: none; /* Remove underline */
+   color: inherit; /* Inherit color */
+   display: block; /* Make the link a block-level element */
+   aspect-ratio: 9 / 16; /* Ensures horizontal rectangle shape */
+ }
+ 
+ 
+.gallery-item img {
+  width: 100%;
+  height: 100%; /* Ensures image fills the container */
+  object-fit: cover; /* Ensures image covers the container */
+  display: block;
+  
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover  {
+  transform: scale(1.05) skew(0deg);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  
+}
+
+
+
+.overlay h2 {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 1;
+  justify-items: center;
+  align-items: center;
+  
+ 
+
+}
+
+@media (min-width: 300px) and (max-width: 900px) 
+ {
+  .gallery-item {
+    top:10%;
+   transform: skew(0deg);
+    height: 250px;
+    overflow: auto;
+    width: 100px;
+    transition: 05s ease-in-out;
+}
+h3{
+  left: 20%;
+}
+
+.gallery-item:nth-child(1) {
+  animation: enlarge 4s linear infinite;
+  animation-delay: 0s;
+  .overlay{
+    animation: enlarge 4s linear infinite;
+  }
+  
+}
+
+.gallery-item:nth-child(2) {
+  animation: enlarge 4s linear infinite;
+  animation-delay: 1s;
+  .overlay{
+    animation: enlarge 4s linear infinite;
+    animation-delay: 1s;
+  }
+}
+
+.gallery-item:nth-child(3) {
+  animation: enlarge 4s linear infinite;
+  animation-delay: 2s;
+  .overlay{
+    animation: enlarge 4s linear infinite;
+    animation-delay: 2s;
+   
+  }
+}
+
+.gallery-item:nth-child(4) {
+  animation: enlarge 4s linear infinite;
+  animation-delay: 3s;
+  .overlay{
+    animation: enlarge 4s linear infinite;
+    animation-delay: 3s;
+    
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  width: 100vw;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+@keyframes enlarge {
+  0%, 20%, 100% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.07);
+   opacity: 1;
+}
+90% {
+    transform: scale(1);
+}
+}
+
+.container > * {
+  flex-basis: 45%; /* Set the width of each item to 45% */
+  margin: 5px;
+}
+body {
+  background-image: url(../../images/trail2m.png);
+ background-position: left top;
+  background-repeat: no-repeat;
+ }
+  
+}

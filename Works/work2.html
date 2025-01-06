@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Models</title>
+  <link rel="stylesheet" href="./works.css">
+</head>
+<body style="background-image: url(../images/3dmbg.jpg);">
+  <div class="name-page"style="top: 10px;">&rarr; 3D MODELS &larr;</div>
+  <div class="container">
+    <!-- Main image -->
+    <div class="main-image">
+      <img id="mainImage" src="../images/3d models/Valorant Bucky.png" alt="Main Image" onclick="openMainImageModal()">
+    </div>
+    
+    <div class="gallery">
+      <div class="gallery-item" onclick="openModal(0)" style="position: relative; width: 300px; height: 200px;">
+        <img src="../images/3d models/Valorant Bucky.png" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+        <p class="image-name" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; color: white; background-color: rgba(0, 0, 0, 0.6); padding: 4px; border-radius: 4px;">Valorant Bucky</p>
+      </div>
+      <div class="gallery-item" onclick="openModal(1)" style="position: relative; width: 300px; height: 200px;">
+        <img src="../images/3d models/Apex Knife.png" alt="Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+        <p class="image-name" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; color: white; background-color: rgba(0, 0, 0, 0.6); padding: 4px; border-radius: 4px;">Apex Knife</p>
+      </div>
+      <div class="gallery-item" onclick="openModal(2)" style="position: relative; width: 300px; height: 200px;">
+        <img src="../images/3d models/Fire Extengisher.png" alt="Image 3" style="width: 100%; height: 100%; object-fit: cover;">
+        <p class="image-name" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; color: white; background-color: rgba(0, 0, 0, 0.6); padding: 4px; border-radius: 4px;">Fire Extengisher</p>
+      </div>
+      <div class="gallery-item" onclick="openModal(3)" style="position: relative; width: 300px; height: 200px;">
+        <img src="../images/3d models/Jeep.png" alt="Image 4" style="width: 100%; height: 100%; object-fit: cover;">
+        <p class="image-name" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; color: white; background-color: rgba(0, 0, 0, 0.6); padding: 4px; border-radius: 4px;">Jeep</p>
+      </div>
+      <div class="gallery-item" onclick="openModal(4)" style="position: relative; width: 300px; height: 200px;">
+        <img src="../images/3d models/Face.jpg" alt="Image 5" style="width: 100%; height: 100%; object-fit: cover;">
+        <p class="image-name" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; color: white; background-color: rgba(0, 0, 0, 0.6); padding: 4px; border-radius: 4px;">Face</p>
+      </div>
+      <div class="gallery-item" onclick="openModal(5)" style="position: relative; width: 300px; height: 200px;">
+        <img src="../images/3d models/Robot. model.png" alt="Image 6" style="width: 100%; height: 100%; object-fit: cover;">
+        <p class="image-name" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; color: white; background-color: rgba(0, 0, 0, 0.6); padding: 4px; border-radius: 4px;">Robot</p>
+      </div>
+    </div>
+  </div>
+  <!-- Modal structure -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-image" id="modalImage">
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+  </div>
+
+  <script src="./work2.js"></script>
+  <script>
+    function goBack() {
+      if (window.history.length > 1) {
+        window.history.back(); // Go back in history
+      } else {
+        window.open('', '_self').close(); // Close the current tab
+      }
+      window.close(); // Attempt to close the current tab
+    }
+  </script>
+</body>
+</html>

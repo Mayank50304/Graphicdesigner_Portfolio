@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shanks Portfolio - Loading</title>
+  <style>
+    html, body {
+      margin: 0;
+      overflow: hidden; /* Prevent scrollbars during loading */
+      height: 100%;
+      background-color: black;
+    }
+
+    .loading-screen {
+      position: fixed; /* Cover the entire viewport */
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('./images/logo2.jpg');
+      animation: brighten 2s ease-in-out infinite;
+      z-index: 9999; /* Ensure it is above other content */
+      transition: transform 1.5s ease-out; /* Smooth transition for exit animation */
+    }
+
+    @keyframes brighten {
+      0% {
+        filter: brightness(90%);
+      }
+      50% {
+        filter: brightness(160%);
+      }
+      100% {
+        filter: brightness(100%);
+      }
+    }
+
+    .loading-screen.fade-out {
+      transform: translateY(-100vh);
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-screen"></div>
+
+  <script>
+    function hideLoadingScreen() {
+      const loadingScreen = document.querySelector('.loading-screen');
+      loadingScreen.classList.add('fade-out');
+
+      // Redirect to main.html after the transition
+      setTimeout(() => {
+        window.location.href = './main.html';
+      }, 1500); // Match this with the transition duration of the loading screen
+    }
+
+    // Show the loading screen for a few seconds then hide it
+    setTimeout(() => {
+      hideLoadingScreen();
+    }, 3000); // Adjust this delay to control how long the loading screen shows
+  </script>
+</body>
+</html>

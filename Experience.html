@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap">
+
+    <style>
+        
+        /* Global Styles */
+        body {
+            background-image: url(./images/experience\ bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; 
+            font-family: 'Quicksand', sans-serif;
+            
+            color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Container Styles */
+        .container {
+            width: 90%; /* Use more horizontal space */
+            max-width: 800px; /* Fixed width for better control */
+            height: 90vh; /* Use more vertical space */
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Ensure no scrolling */
+        }
+        
+        /* Header Styles */
+        .header {
+            padding: 8px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color:white;
+            box-shadow: 0 0 5px #bbb; /* Reduced shadow for space-saving */
+            border-radius: 8px; /* Slightly smaller radius */
+            border: 1px dashed #333; /* Reduced border width */
+            margin-bottom: 8px; /* Reduced bottom margin */
+            text-align: center; /* Center text in header */
+        }
+        
+        /* Experience Styles */
+        .experience {
+            flex: 1; /* Allow experiences to grow */
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 8px 0;
+            padding: 8px;
+            border-radius: 8px; /* Slightly smaller radius */
+            box-shadow: 0 0 5px #bbb; /* Reduced shadow for space-saving */
+            border: 1px dashed #333; /* Reduced border width */
+            transition: 0.3s ease-in-out;
+            overflow: hidden; /* Prevent content overflow */
+        }
+        
+        .experience:hover {
+            transform: scale(1.02); /* Slightly reduced scale effect */
+        }
+        
+        .experience h2 {
+            color:white;
+            font-size: 1.1em; /* Adjusted font size */
+            margin: 0 0 5px; /* Adjusted margin */
+        }
+        
+        .experience h3 {
+            color:white;
+            font-size: 1em; /* Adjusted font size */
+            margin: 0 0 10px; /* Adjusted margin */
+        }
+        
+        /* Project List Styles */
+        .project-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0; /* Remove default margin */
+            text-align: left;
+        }
+        
+        .project-list li {
+            background-color: rgba(0, 0, 0, 0.0);
+            margin: 5px 0;
+            padding: 5px;
+            border-left: 3px dashed #333; /* Reduced border width */
+            border-radius: 4px; /* Slightly smaller radius */
+            font-size: 1em; /* Adjusted font size */
+        }
+        
+        .project-list li h4 {
+            margin: 0;
+            color:white;
+        }
+        
+        .project-list li p {
+            margin: 3px 0 0;
+            color:white;
+        }
+
+        /* Responsive Styles */
+     /* Mobile responsive styles */
+@media (max-width: 900px) {
+    .container {
+        width: 100%; /* Full width on smaller screens */
+        padding: 5px; /* Reduced padding */
+        height: auto; /* Allow container to adjust height based on content */
+    }
+
+    .experience {
+        margin: 0 0 10px; /* Remove excessive margin, keep a small bottom margin */
+        padding: 5px; /* Reduce padding */
+        font-size: 1.1em; /* Adjusted font size */
+    }
+
+    .experience h2 {
+        font-size: 1.1em; /* Adjusted font size */
+    }
+
+    .experience h3 {
+        font-size: 1em; /* Adjusted font size */
+    }
+
+    .project-list {
+        padding: 0; /* Remove extra padding */
+    }
+
+    .project-list li {
+        font-size: 0.8em; /* Adjusted font size */
+        margin: 3px 0; /* Adjusted margin */
+        padding: 3px; /* Adjusted padding */
+    }
+}
+ </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Experience</h1>
+        </div>
+        
+        <div class="experience">
+            <h2>Level Designer & 3D Modeler | Game Dev Studios</h2>
+           
+            <ul class="project-list">
+                <li>
+                    <h4>Game Level Creation & Integration                    </h4>
+                    <p>Developed and optimized engaging game levels with a focus on environmental design and seamless gameplay.</p>
+                </li>
+                <li>
+                    <h4>3D Asset Creation</h4>
+                    <p>Produced high-quality character models and props, applying advanced texturing and shading techniques in Blender, Maya, Unity, and Unreal Engine.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="experience">
+            <h2>Graphic Design (Side Hustle)</h2>
+            
+            <ul class="project-list">
+                <li>
+                    <h4>Branding & Marketing Materials</h4>
+                    <p>Designed logos, brand identities, and promotional graphics using Adobe Creative Suite, enhancing brand recognition and market presence..</p>
+                </li>
+                <li>
+                    <h4>Visual Communication</h4>
+                    <p>Developed compelling visual content and honed attention to detail, contributing to successful client projects and effective communication.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

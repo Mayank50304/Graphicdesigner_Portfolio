@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Works</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap">
+  <link rel="stylesheet" href="./CSS/myworks.css">
+</head>
+<body>
+  <div class="head">
+    <h1>Portfolio</h1>
+  </div>
+  <div class="container">
+    <a href="./portfolio.html#w1" class="gallery-item" data-url="./portfolio.html#w1">
+      <img src="./images/w1.png" alt="Work 1">
+      <div class="overlay">
+        <h2>DEMO<br></h2>
+        <h2 style="margin-top: 20px;"><br><br>REEL</h2>
+      </div>
+    </a>
+   
+    <a href="./portfolio.html#w2" class="gallery-item" data-url="./portfolio.html#w2">
+      <img src="./images/w2.png" alt="Work 2">
+      <div class="overlay">
+        <h2>3D MODELLING</h2>
+      </div>
+    </a>
+  
+    <a href="./portfolio.html#w3" class="gallery-item" data-url="./portfolio.html#w3">
+      <img src="./images/w3.png" alt="Work 3">
+      <div class="overlay">
+        <h2>BLENDER</h2>
+      </div>
+    </a>
+    <a href="./portfolio.html#w4" class="gallery-item" data-url="./portfolio.html#w4">
+      <img src="./images/w4.png" alt="Work 4">
+      <div class="overlay">
+        <h2>POSTERS</h2>
+      </div>
+    </a>
+  </div>
+  <h3>Tap To View My Works</h3>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Store the current URL in sessionStorage
+      sessionStorage.setItem('previousUrl', window.location.href);
+
+      // Prevent default link actions and manually open links in a new tab
+      document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          const url = link.getAttribute('data-url');
+          if (url) {
+            window.open(url, '_blank');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

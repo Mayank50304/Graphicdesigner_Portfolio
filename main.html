@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shashank Portfolio</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <!-- Iframes -->
+  <iframe id="s4" class="myIframe" src="./HomePage.html"></iframe>
+  <iframe id="s1" class="myIframe" src="./Myworks.html"></iframe>
+  <iframe id="s2" class="myIframe" src="./Experience.html"></iframe>
+  <iframe id="s3" class="myIframe" src="./Aboutme.html"></iframe>
+
+  <!-- Dropdown Menu -->
+  <div class="dropdown">
+    <button class="dropbtn">&#9776;</button>
+    <div class="dropdown-content">
+      <a href="#s4" >HOME</a>
+      <a href="#s1" >PORTFOLIO</a>
+      <a href="#s2" >EXPERIENCE</a>
+      <a href="#s3" >ABOUT ME</a>
+      <a href="#" >&#10005; &#8594;</a>
+    </div>
+  </div>
+
+  <!-- Top Panel -->
+  <div class="top-panel">
+    <h1 class="portfolio-title">Shashank's Portfolio</h1>
+    <div class="logo"></div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script>
+    
+
+    // Function to make all links in iframes open in a new tab
+    function setupIframeLinks() {
+      document.querySelectorAll('iframe').forEach(iframe => {
+        iframe.addEventListener('load', () => {
+          const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+          // Make all links open in a new tab
+          iframeDoc.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', event => {
+              // Open the link in a new tab
+              window.open(link.href, '_blank');
+              event.preventDefault(); // Prevent default action to ensure no navigation within the iframe
+            });
+          });
+        });
+      });
+    }
+
+    // Set up iframe link behavior after the page loads
+    window.onload = setupIframeLinks;
+  </script>
+</body>
+</html>

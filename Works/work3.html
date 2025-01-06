@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blender</title>
+  <style>  
+  </style>
+  <link rel="stylesheet" href="./works.css">
+</head>
+<body style="background-image: url(../images/Demo\ reel\ bg.jpg);">
+   <div class="name-page" style="top: 10px;">&rarr; BLENDER &larr;</div>
+  <div class="video-containerv">
+    <video controls>
+      <source src="your-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <div class="description-containerv">
+    <h1>WORK IN PROGRESS</h1>
+    <p>Your description goes here. Add any additional information or details about the video.</p>
+  </div>
+
+  <script>
+    function goBack() {
+      if (window.history.length > 1) {
+        window.history.back(); // Go back in history
+      } else {
+        window.open('', '_self').close(); // Close the current tab
+      }
+      window.close(); // Attempt to close the current tab
+    }
+  </script>
+</body>
+</html>
